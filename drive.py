@@ -33,20 +33,6 @@ def crop_and_resize(image):
 
 @sio.on('telemetry')
 def telemetry(sid, data):
-    """
-    Handle telemetry data from the simulator.
-
-    The simulator sends:
-    - Image from center camera
-    - Current steering angle
-    - Current throttle
-    - Current speed
-    - Current brake
-
-    We respond with:
-    - Predicted steering angle
-    - Throttle value (based on speed controller)
-    """
     if data:
         # Current steering angle from simulator
         steering_angle = float(data["steering_angle"])
