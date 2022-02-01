@@ -1,16 +1,3 @@
-"""
-Autonomous Driving Script for Udacity Car Simulator
-
-This script loads a trained behavioral cloning model and uses it to
-control the car autonomously in the Udacity simulator.
-
-Usage:
-    python drive.py model_best.h5
-
-Optional arguments:
-    --speed: Target speed (default: 9)
-"""
-
 import argparse
 import base64
 import cv2
