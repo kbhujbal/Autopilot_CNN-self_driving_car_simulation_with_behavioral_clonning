@@ -92,13 +92,6 @@ def connect(sid, environ):
 
 
 def send_control(steering_angle, throttle):
-    """
-    Send control commands to the simulator.
-
-    Args:
-        steering_angle: Predicted steering angle
-        throttle: Throttle value
-    """
     sio.emit(
         "steer",
         data={
