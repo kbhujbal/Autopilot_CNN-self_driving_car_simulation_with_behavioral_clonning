@@ -62,18 +62,6 @@ def load_driving_log(log_file_path):
 
 
 def crop_and_resize(image):
-    """
-    Crop the irrelevant sky/hood environment and resize to model input shape.
-
-    Crops top 60 pixels (sky) and bottom 25 pixels (hood) to focus on the road.
-    Then resizes to the INPUT_SHAPE dimensions.
-
-    Args:
-        image: Original image (160x320x3)
-
-    Returns:
-        Preprocessed image (66x200x3)
-    """
     # Crop: remove top 60 pixels (sky) and bottom 25 pixels (hood)
     cropped = image[60:135, :, :]
     # Resize to INPUT_SHAPE
