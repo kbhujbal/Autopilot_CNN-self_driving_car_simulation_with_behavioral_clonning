@@ -76,18 +76,6 @@ def flip_image(image, steering_angle):
 
 
 def random_shift(image, steering_angle, shift_range=SHIFT_RANGE):
-    """
-    Apply random horizontal and vertical shifts to simulate off-center driving.
-    Adjust steering angle proportionally to horizontal shift.
-
-    Args:
-        image: Input image
-        steering_angle: Original steering angle
-        shift_range: Maximum shift in pixels
-
-    Returns:
-        Shifted image and adjusted steering angle
-    """
     rows, cols, _ = image.shape
 
     # Random horizontal and vertical shift
