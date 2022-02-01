@@ -70,17 +70,6 @@ def crop_and_resize(image):
 
 
 def flip_image(image, steering_angle):
-    """
-    Horizontally flip the image and negate the steering angle.
-    This eliminates left/right turn bias in the training data.
-
-    Args:
-        image: Input image
-        steering_angle: Original steering angle
-
-    Returns:
-        Flipped image and negated steering angle
-    """
     flipped_image = cv2.flip(image, 1)
     flipped_angle = -steering_angle
     return flipped_image, flipped_angle
