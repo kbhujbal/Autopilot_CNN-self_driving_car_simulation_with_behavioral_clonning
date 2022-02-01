@@ -24,16 +24,6 @@ speed_limit = 15
 
 
 def crop_and_resize(image):
-    """
-    Preprocess image exactly as during training.
-    Crop sky/hood and resize to model input shape.
-
-    Args:
-        image: Original image from simulator (160x320x3)
-
-    Returns:
-        Preprocessed image (66x200x3)
-    """
     # Crop: remove top 60 pixels (sky) and bottom 25 pixels (hood)
     cropped = image[60:135, :, :]
     # Resize to (66, 200)
