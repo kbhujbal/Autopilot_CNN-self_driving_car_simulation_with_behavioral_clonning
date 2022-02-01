@@ -103,14 +103,6 @@ def send_control(steering_angle, throttle):
 
 
 def save_frame(image, steering_angle, speed):
-    """
-    Optional: Save frames for debugging or video creation.
-
-    Args:
-        image: Image array
-        steering_angle: Predicted steering angle
-        speed: Current speed
-    """
     timestamp = datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S_%f')[:-3]
     filename = f'run_images/{timestamp}.jpg'
 
