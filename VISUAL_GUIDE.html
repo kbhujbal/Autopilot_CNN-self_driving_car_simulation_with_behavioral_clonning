@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPilot - Visual Documentation Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        .image-container {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .caption {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        .section-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚗 AutoPilot - Visual Documentation Guide</h1>
+    <p style="text-align: center; font-size: 1.2em; color: #555;">
+        Deep Learning Model for Simulating Self Driving Car<br>
+        <em>Behavioral Cloning using NVIDIA's CNN Architecture</em>
+    </p>
+
+    <div class="section-header">
+        <h2>🏗️ System Architecture</h2>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 1: Implementation Architecture</h3>
+        <img src="docs/implementation_architecture.png" alt="Implementation Architecture">
+        <p class="caption">High-level architecture showing data flow from simulator to Python client</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 2: System Architecture (Detailed)</h3>
+        <img src="docs/system_architecture_detailed.png" alt="System Architecture">
+        <p class="caption">Detailed system architecture with CNN processing pipeline</p>
+    </div>
+
+    <div class="section-header">
+        <h2>🧠 NVIDIA CNN Architecture</h2>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 11: Network Architecture</h3>
+        <img src="docs/nvidia_architecture.png" alt="NVIDIA Architecture">
+        <p class="caption">NVIDIA's end-to-end learning architecture: 5 Conv layers + 3 FC layers</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 10: Accompanied Model</h3>
+        <img src="docs/accompanied_model.png" alt="Model Code">
+        <p class="caption">Keras Sequential model implementation code</p>
+    </div>
+
+    <div class="section-header">
+        <h2>🎮 Udacity Simulator Interface</h2>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 5: Simulator Main Menu</h3>
+        <img src="docs/first_screen.png" alt="First Screen">
+        <p class="caption">Main menu with Training Mode and Autonomous Mode options</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 3: Configuration Screen</h3>
+        <img src="docs/config_screen.png" alt="Configuration">
+        <p class="caption">Graphics quality and screen resolution settings</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 4: Controls Configuration</h3>
+        <img src="docs/controls_config.png" alt="Controls">
+        <p class="caption">Keyboard and joystick control mappings</p>
+    </div>
+
+    <div class="section-header">
+        <h2>🛣️ Available Tracks</h2>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 6: Track 1 (Training Track)</h3>
+        <img src="docs/track1.png" alt="Track 1">
+        <p class="caption">Simple track with gentle curves - used for training data collection</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 7: Track 2 (Testing Track)</h3>
+        <img src="docs/track2.png" alt="Track 2">
+        <p class="caption">Complex track with high altitude, tight curves, and shadows - for generalization testing</p>
+    </div>
+
+    <div class="section-header">
+        <h2>📊 Dataset Structure</h2>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 8: Dataset Sample Images</h3>
+        <img src="docs/dataset_sample.png" alt="Dataset Sample">
+        <p class="caption">Center, Left, and Right camera perspectives captured during training</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 9: driving_log.csv Structure</h3>
+        <img src="docs/driving_log_csv.png" alt="Driving Log">
+        <p class="caption">CSV file containing image paths, steering angles, throttle, brake, and speed data</p>
+    </div>
+
+    <div class="section-header">
+        <h2>🎨 Data Augmentation Techniques</h2>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 12(A): Crop & Resize</h3>
+        <img src="docs/crop_image.png" alt="Crop">
+        <p class="caption">Remove sky (top 60px) and hood (bottom 25px), resize to 66×200</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 12(B): Horizontal Flip</h3>
+        <img src="docs/flip_image.png" alt="Flip">
+        <p class="caption">Mirror image horizontally, negate steering angle (eliminates turn bias)</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 12(C)(i): Vertical Shift</h3>
+        <img src="docs/shift_vertical.png" alt="Vertical Shift">
+        <p class="caption">Random vertical translation to simulate elevation changes</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 12(C)(ii): Horizontal Shift</h3>
+        <img src="docs/shift_horizontal.png" alt="Horizontal Shift">
+        <p class="caption">Random horizontal shift with steering correction (±20px, 0.004 angle/pixel)</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 12(D): Brightness Adjustment</h3>
+        <img src="docs/brightness.png" alt="Brightness">
+        <p class="caption">Random brightness factor (0.4-1.2) for weather generalization</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 12(E): Random Shadows</h3>
+        <img src="docs/random_shadows.png" alt="Shadows">
+        <p class="caption">Polygonal shadow masks to simulate varying lighting conditions</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 12(F): Random Blur</h3>
+        <img src="docs/random_blur.png" alt="Blur">
+        <p class="caption">Gaussian blur (3×3 or 5×5) to simulate camera lens imperfections</p>
+    </div>
+
+    <div class="section-header">
+        <h2>📈 Training Results</h2>
+    </div>
+
+    <div class="image-container">
+        <h3>Figure 13: Loss Over Epochs</h3>
+        <img src="docs/loss_epochs.png" alt="Loss Graph">
+        <p class="caption">Training and validation loss convergence over 50 epochs (Final val_loss: 0.0092)</p>
+    </div>
+
+    <hr style="margin: 50px 0; border: none; border-top: 2px solid #ddd;">
+    
+    <footer style="text-align: center; color: #7f8c8d; padding: 20px;">
+        <p><strong>Kunal Bhujbal</strong> | Vasantdada Patil Pratishthan's College of Engineering & Visual Arts</p>
+        <p>kunalbhujbal41035@gmail.com</p>
+        <p>© 2023 IEEE | Deep Learning Model for Simulating Self Driving Car</p>
+    </footer>
+</body>
+</html>
