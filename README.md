@@ -34,20 +34,6 @@ This project implements an **end-to-end deep learning approach** for autonomous 
 - Generalize driving behavior across different tracks using data augmentation
 - Achieve autonomous driving on Track 2 despite training only on Track 1
 
-### Authors
-
-**Kunal Bhujbal**
-Department of Computer Engineering
-Vasantdada Patil Pratishthan's College of Engineering & Visual Arts
-Mumbai, India
-kunalbhujbal41035@gmail.com
-
-**Dr. Mahendra Pawar**
-Department of Computer Engineering
-Vasantdada Patil Pratishthan's College of Engineering & Visual Arts
-Mumbai, India
-mahendrap@pvppcoe.ac.in
-
 ---
 
 ## 🏗️ Project Architecture
