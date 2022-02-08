@@ -188,25 +188,3 @@ AutoPilot/
 ├── model_best.h5              # Trained model
 └── docs/                      # Documentation images
 ```
-
----
-
-## References
-
-[1] **M. Bojarski et al., "End to End Learning for Self-Driving Cars"**, NVIDIA, 2016. [arXiv:1604.07316](https://arxiv.org/abs/1604.07316)
-
-[2] A. Bhalla, M. S. Nikhila and P. Singh, "Simulation of Self-driving Car using Deep Learning", *3rd International Conference on Intelligent Sustainable Systems (ICISS)*, 2020.
-
-[3] H. Fujiyoshi, T. Hirakawa, T. Yamashita, "Deep learning-based image recognition for autonomous driving", *IATSS Research, Volume 43, Issue 4*, 2019.
-
----
-
-## Contact
-
-**Kunal Bhujbal**
-📧 kunalbhujbal41035@gmail.com
-🏫 Vasantdada Patil Pratishthan's College of Engineering & Visual Arts, Mumbai
-
----
-
-**Happy Autonomous Driving! 🚗💨**
