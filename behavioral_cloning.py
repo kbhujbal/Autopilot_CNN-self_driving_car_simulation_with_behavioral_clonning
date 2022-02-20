@@ -94,16 +94,6 @@ def random_shift(image, steering_angle, shift_range=SHIFT_RANGE):
 
 
 def random_brightness(image):
-    """
-    Adjust image brightness randomly to generalize across different
-    lighting/weather conditions.
-
-    Args:
-        image: Input image in RGB format
-
-    Returns:
-        Image with adjusted brightness
-    """
     # Convert to HSV color space
     hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
 
@@ -119,15 +109,6 @@ def random_brightness(image):
 
 
 def random_shadow(image):
-    """
-    Apply random shadows to simulate varying road conditions.
-
-    Args:
-        image: Input image in RGB format
-
-    Returns:
-        Image with random shadow
-    """
     rows, cols, _ = image.shape
 
     # Randomly choose shadow vertices
@@ -153,15 +134,6 @@ def random_shadow(image):
 
 
 def random_blur(image):
-    """
-    Apply random Gaussian blur to simulate camera limitations.
-
-    Args:
-        image: Input image
-
-    Returns:
-        Blurred image
-    """
     kernel_size = np.random.choice([3, 5])
     blurred_image = cv2.GaussianBlur(image, (kernel_size, kernel_size), 0)
     return blurred_image
