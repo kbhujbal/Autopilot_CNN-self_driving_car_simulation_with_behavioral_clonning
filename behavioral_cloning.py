@@ -1,11 +1,3 @@
-"""
-Behavioral Cloning for Autonomous Driving
-NVIDIA-Inspired CNN Model for Udacity Car Simulator
-
-This script implements a complete end-to-end deep learning pipeline for
-autonomous vehicle control using behavioral cloning technique.
-"""
-
 # ============================================================================
 # A. Setup and Constants (Driver Script)
 # ============================================================================
