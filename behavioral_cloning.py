@@ -140,17 +140,6 @@ def random_blur(image):
 
 
 def augment_image(image, steering_angle, is_training=True):
-    """
-    Apply comprehensive augmentation pipeline to a single image.
-
-    Args:
-        image: Input image
-        steering_angle: Original steering angle
-        is_training: Whether to apply augmentation (True for training, False for validation)
-
-    Returns:
-        Augmented image and adjusted steering angle
-    """
     if not is_training:
         return image, steering_angle
 
@@ -178,21 +167,6 @@ def augment_image(image, steering_angle, is_training=True):
 
 
 def image_data_generator(samples, image_dir, batch_size=BATCH_SIZE, is_training=True):
-    """
-    Generator function that yields batches of augmented and preprocessed images.
-
-    Implements multi-camera correction by using left, center, and right camera images
-    with appropriate steering angle corrections.
-
-    Args:
-        samples: List of samples from driving log
-        image_dir: Base directory containing IMG folder
-        batch_size: Number of samples per batch
-        is_training: Whether to apply augmentation
-
-    Yields:
-        Batches of (images, steering_angles)
-    """
     num_samples = len(samples)
 
     while True:  # Loop forever for Keras fit_generator
@@ -264,20 +238,6 @@ def image_data_generator(samples, image_dir, batch_size=BATCH_SIZE, is_training=
 # ============================================================================
 
 def create_nvidia_model():
-    """
-    Create the NVIDIA-inspired CNN model for end-to-end autonomous driving.
-
-    Architecture:
-    - Normalization layer
-    - 5 Convolutional layers with ELU activation
-    - Dropout for regularization
-    - Flatten layer
-    - 3 Fully connected layers with ELU activation
-    - Output layer (steering angle prediction)
-
-    Returns:
-        Keras Sequential model
-    """
     model = Sequential([
         # Normalization layer: normalize pixel values to [-1, 1]
         Lambda(lambda x: x / 127.5 - 1.0, input_shape=INPUT_SHAPE),
@@ -324,14 +284,6 @@ def create_nvidia_model():
 # ============================================================================
 
 def train_model(log_file_path, image_dir, model_save_path='model.h5'):
-    """
-    Complete training pipeline for the behavioral cloning model.
-
-    Args:
-        log_file_path: Path to driving_log.csv
-        image_dir: Base directory containing IMG folder
-        model_save_path: Path to save the best model
-    """
     print("=" * 80)
     print("BEHAVIORAL CLONING - AUTONOMOUS DRIVING")
     print("=" * 80)
@@ -418,12 +370,6 @@ def train_model(log_file_path, image_dir, model_save_path='model.h5'):
 
 
 def plot_training_history(history):
-    """
-    Plot training and validation loss over epochs.
-
-    Args:
-        history: Keras History object from model.fit()
-    """
     plt.figure(figsize=(12, 4))
 
     # Plot loss
