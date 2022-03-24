@@ -2,7 +2,7 @@
 
 **End-to-end Behavioral Cloning using NVIDIA's CNN Architecture**
 
-![System Architecture](docs/system_architecture_detailed.png)
+![System Architecture](docs/controls_config.png)
 
 ---
 
@@ -23,7 +23,7 @@ This project implements an **end-to-end deep learning approach** for autonomous 
 
 ### NVIDIA CNN Architecture
 
-![NVIDIA Network Architecture](docs/nvidia_architecture.png)
+![NVIDIA Network Architecture](docs/crop_image.png)
 
 The model uses NVIDIA's proven architecture with 5 convolutional layers followed by 4 fully connected layers:
 
@@ -84,10 +84,10 @@ pip install -r requirements.txt
 
 ### Available Tracks
 
-![Track 1](docs/track1.png)
+![Track 1](docs/track2.png)
 *Track 1 - Simple track used for training*
 
-![Track 2](docs/track2.png)
+![Track 2](docs/first_screen.png)
 *Track 2 - Complex track for testing generalization*
 
 ### Collecting Data
@@ -104,8 +104,6 @@ pip install -r requirements.txt
 ---
 
 ## Data Augmentation
-
-![Implementation Architecture](docs/implementation_architecture.png)
 
 Critical augmentation techniques for generalization:
 
